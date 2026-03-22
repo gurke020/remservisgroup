@@ -8,8 +8,7 @@ const PHONE_DISPLAY = "+7 708 630 94 07";
 
 const links = [
   { to: "/", label: "Главная" },
-  { to: "/services", label: "Услуги" },
-  { to: "/prices", label: "Цены" },
+  { to: "/services", label: "Услуги и цены" },
   { to: "/contacts", label: "Контакты" },
 ];
 
