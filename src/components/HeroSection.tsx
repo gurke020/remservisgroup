@@ -61,7 +61,7 @@ const HeroSection = () => {
 
           {/* Sub */}
           <p className="animate-reveal-up delay-3 text-lg md:text-xl text-white/80 max-w-lg mx-auto leading-relaxed text-balance">
-            Приедем сегодня, починим и&nbsp;почистим. Работаем без&nbsp;выходных с&nbsp;гарантией на&nbsp;все&nbsp;работы.
+            Приедем сегодня в&nbsp;любой район Алматы, починим и&nbsp;почистим. Работаем без&nbsp;выходных с&nbsp;гарантией.
           </p>
 
           {/* CTAs */}
