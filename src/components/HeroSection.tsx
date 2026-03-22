@@ -46,7 +46,7 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="animate-reveal-up inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-4 py-1.5 text-xs font-medium text-white/80">
             <Sparkles className="w-3.5 h-3.5 text-cta" />
-            Выезд мастера сегодня
+            Выезд мастера сегодня · Алматы
           </div>
 
           {/* Company */}
