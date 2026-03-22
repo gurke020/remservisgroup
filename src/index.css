@@ -163,6 +163,13 @@
   100% { background-position: 200% 0; }
 }
 
+@keyframes snowflake {
+  0%, 100% { opacity: 0.5; transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-6px) rotate(45deg); }
+  50% { opacity: 1; transform: translateY(2px) rotate(90deg); }
+  75% { transform: translateY(-4px) rotate(135deg); }
+}
+
 /* ─── Utility classes ─── */
 .animate-reveal-up {
   animation: reveal-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -190,6 +197,10 @@
 
 .animate-pulse-soft {
   animation: pulse-soft 3s ease-in-out infinite;
+}
+
+.animate-snowflake {
+  animation: snowflake 5s ease-in-out infinite;
 }
 
 /* ─── Stagger delays ─── */
