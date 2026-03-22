@@ -199,6 +199,10 @@
   animation: pulse-soft 3s ease-in-out infinite;
 }
 
+.animate-snowflake {
+  animation: snowflake 5s ease-in-out infinite;
+}
+
 /* ─── Stagger delays ─── */
 .delay-1 { animation-delay: 80ms; }
 .delay-2 { animation-delay: 160ms; }
