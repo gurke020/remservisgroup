@@ -27,7 +27,7 @@ const HeroSection = () => {
       {snowflakes.map((s, i) => (
         <Snowflake
           key={i}
-          className="absolute text-white/[0.07] animate-snowflake pointer-events-none"
+          className="absolute text-white/20 animate-snowflake pointer-events-none"
           style={{
             top: s.top,
             left: s.left,
