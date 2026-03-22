@@ -90,9 +90,15 @@ const HeroSection = () => {
           </a>
 
           {/* Trust */}
-          <div className="animate-reveal-up delay-6 flex items-center justify-center gap-2 text-white/40 text-sm">
-            <ShieldCheck className="w-4 h-4 shrink-0" />
-            <span>Диагностика · Ремонт · Чистка · Заправка · Установка</span>
+          <div className="animate-reveal-up delay-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-white/40 text-sm">
+            <span className="inline-flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 shrink-0" />
+              Диагностика · Ремонт · Чистка · Заправка · Установка
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <MapPin className="w-4 h-4 shrink-0" />
+              г. Алматы и пригород
+            </span>
           </div>
         </div>
       </div>
