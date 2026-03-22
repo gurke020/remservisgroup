@@ -15,8 +15,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        cta: "bg-cta text-cta-foreground hover:bg-cta/90 shadow-md hover:shadow-lg",
         whatsapp: "bg-[hsl(142,70%,40%)] text-white hover:bg-[hsl(142,70%,35%)] shadow-md hover:shadow-lg",
-        hero: "bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl text-base font-bold",
+        hero: "bg-cta text-cta-foreground hover:bg-cta/90 shadow-lg hover:shadow-xl text-base font-bold",
         heroOutline: "border-2 border-white/70 text-white hover:bg-white/10 text-base font-semibold",
       },
       size: {
