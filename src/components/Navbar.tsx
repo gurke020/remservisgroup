@@ -20,19 +20,17 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border/50 shadow-sm">
       <div className="container flex items-center justify-between h-14 md:h-16 px-4 md:px-8">
-        {/* Logo */}
         <Link to="/" className="text-lg font-bold text-foreground tracking-tight">
           Remservisgroup
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                pathname === l.to ? "text-primary" : "text-muted-foreground"
+              className={`text-sm font-medium transition-colors link-underline pb-0.5 ${
+                pathname === l.to ? "text-primary" : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {l.label}
@@ -40,16 +38,13 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Desktop phone */}
-        <a
-          href={`tel:${PHONE}`}
-          className="hidden md:inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
-        >
-          <Phone className="w-4 h-4" />
-          {PHONE_DISPLAY}
-        </a>
+        <Button asChild variant="cta" size="sm" className="hidden md:inline-flex">
+          <a href={`tel:${PHONE}`}>
+            <Phone className="!size-3.5" />
+            {PHONE_DISPLAY}
+          </a>
+        </Button>
 
-        {/* Mobile hamburger */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden p-2 -mr-2 text-foreground"
@@ -59,9 +54,8 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-border/50 bg-card px-4 pb-4 pt-2 space-y-1 animate-reveal-up">
+        <div className="md:hidden border-t border-border/50 bg-card px-4 pb-4 pt-2 space-y-1 animate-fade-in">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -77,7 +71,7 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="pt-2">
-            <Button asChild size="lg" className="w-full">
+            <Button asChild variant="cta" size="lg" className="w-full">
               <a href={`tel:${PHONE}`}>
                 <Phone className="!size-4" />
                 {PHONE_DISPLAY}
