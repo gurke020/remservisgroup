@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, ShieldCheck, Sparkles, Snowflake } from "lucide-react";
+import { Phone, MessageCircle, ShieldCheck, Sparkles, Snowflake, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PHONE = "+77086309407";
