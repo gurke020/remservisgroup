@@ -19,11 +19,15 @@ const HeroSection = () => {
     <section className="relative min-h-[92svh] flex items-center overflow-hidden"
       style={{ background: "linear-gradient(160deg, hsl(211 65% 45%) 0%, hsl(205 72% 38%) 50%, hsl(199 80% 42%) 100%)" }}
     >
+      {/* Decorative circles */}
+      <div className="absolute top-[-20%] right-[-10%] w-[55vw] h-[55vw] rounded-full opacity-[0.06] bg-white animate-float" />
+      <div className="absolute bottom-[-18%] left-[-8%] w-[35vw] h-[35vw] rounded-full opacity-[0.04] bg-white animate-float" style={{ animationDelay: "2s" }} />
+
       {/* Snowflakes */}
       {snowflakes.map((s, i) => (
         <Snowflake
           key={i}
-          className="absolute text-white/[0.07] animate-snowflake pointer-events-none"
+          className="absolute text-white/20 animate-snowflake pointer-events-none"
           style={{
             top: s.top,
             left: s.left,
