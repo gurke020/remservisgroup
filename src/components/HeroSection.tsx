@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, ShieldCheck, Sparkles, Snowflake } from "lucide-react";
+import { Phone, MessageCircle, ShieldCheck, Sparkles, Snowflake, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PHONE = "+77086309407";
@@ -46,7 +46,7 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="animate-reveal-up inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-4 py-1.5 text-xs font-medium text-white/80">
             <Sparkles className="w-3.5 h-3.5 text-cta" />
-            Выезд мастера сегодня
+            Выезд мастера сегодня · Алматы
           </div>
 
           {/* Company */}
@@ -61,7 +61,7 @@ const HeroSection = () => {
 
           {/* Sub */}
           <p className="animate-reveal-up delay-3 text-lg md:text-xl text-white/80 max-w-lg mx-auto leading-relaxed text-balance">
-            Приедем сегодня, починим и&nbsp;почистим. Работаем без&nbsp;выходных с&nbsp;гарантией на&nbsp;все&nbsp;работы.
+            Приедем сегодня в&nbsp;любой район Алматы, починим и&nbsp;почистим. Работаем без&nbsp;выходных с&nbsp;гарантией.
           </p>
 
           {/* CTAs */}
@@ -90,9 +90,15 @@ const HeroSection = () => {
           </a>
 
           {/* Trust */}
-          <div className="animate-reveal-up delay-6 flex items-center justify-center gap-2 text-white/40 text-sm">
-            <ShieldCheck className="w-4 h-4 shrink-0" />
-            <span>Диагностика · Ремонт · Чистка · Заправка · Установка</span>
+          <div className="animate-reveal-up delay-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-white/40 text-sm">
+            <span className="inline-flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 shrink-0" />
+              Диагностика · Ремонт · Чистка · Заправка · Установка
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <MapPin className="w-4 h-4 shrink-0" />
+              г. Алматы и пригород
+            </span>
           </div>
         </div>
       </div>
