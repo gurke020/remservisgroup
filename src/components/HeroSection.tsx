@@ -1,4 +1,5 @@
-import { Phone, MessageCircle, ShieldCheck, Sparkles, Snowflake, MapPin } from "lucide-react";
+import { Phone, ShieldCheck, Sparkles, Snowflake, MapPin } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 
 const PHONE = "+77066656662";
