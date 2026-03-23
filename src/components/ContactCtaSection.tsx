@@ -40,7 +40,7 @@ const ContactCtaSection = () => {
             </Button>
             <Button asChild variant="whatsapp" size="xl" className="flex-1">
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="!size-5" />
+                <WhatsAppIcon className="!size-5" />
                 WhatsApp
               </a>
             </Button>

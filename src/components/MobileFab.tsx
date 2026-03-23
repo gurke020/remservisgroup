@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
