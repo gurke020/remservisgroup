@@ -11,6 +11,7 @@ const MobileFab = () => {
 
   const isHome = pathname === "/";
   const isContacts = pathname === "/contacts";
+  const isServices = pathname === "/services";
 
   useEffect(() => {
     if (!isHome) return;
@@ -20,15 +21,15 @@ const MobileFab = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHome]);
 
-  if (isContacts) return null;
+  if (isContacts || isServices) return null;
 
   const visible = isHome ? scrollPast : true;
 
   return (
     <div
-      className={`fixed bottom-5 z-50 flex flex-col gap-3 md:hidden transition-all duration-300 ${
-        pathname === "/services" ? "left-4" : "right-4"
-      } ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
+      className={`fixed bottom-5 right-4 z-50 flex flex-col gap-3 md:hidden transition-all duration-300 ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+      }`}
     >
       <a
         href={WA_LINK}
