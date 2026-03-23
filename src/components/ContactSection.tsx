@@ -6,9 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollReveal } from "./useScrollReveal";
 
-const PHONE = "+77086309407";
-const PHONE_DISPLAY = "+7 708 630 9407";
-const WA_LINK = `https://wa.me/77086309407?text=${encodeURIComponent("Здравствуйте! Хочу оставить заявку на обслуживание кондиционера.")}`;
+const PHONE = "+77066656662";
+const PHONE_DISPLAY = "+7 706 665 66 62";
+const WA_LINK = `https://wa.me/77066656662?text=${encodeURIComponent("Здравствуйте! Хочу оставить заявку на обслуживание кондиционера.")}`;
 
 const ContactSection = () => {
   const { toast } = useToast();

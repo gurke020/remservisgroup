@@ -1,9 +1,9 @@
 import { Phone, MessageCircle, ShieldCheck, Sparkles, Snowflake, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const PHONE = "+77086309407";
-const PHONE_DISPLAY = "+7 708 630 94 07";
-const WA_LINK = `https://wa.me/77086309407?text=${encodeURIComponent("Здравствуйте! Хочу вызвать мастера по кондиционерам.")}`;
+const PHONE = "+77066656662";
+const PHONE_DISPLAY = "+7 706 665 66 62";
+const WA_LINK = `https://wa.me/77066656662?text=${encodeURIComponent("Здравствуйте! Хочу вызвать мастера по кондиционерам.")}`;
 
 const snowflakes = [
   { top: "12%", left: "8%", size: 14, delay: "0s", duration: "6s" },

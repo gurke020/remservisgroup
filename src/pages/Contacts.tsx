@@ -104,7 +104,7 @@ const ContactsPage = () => {
                 <Clock className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-sm font-medium">Режим работы</p>
-                  <p className="text-sm text-muted-foreground">Ежедневно с 09:00 до 20:00</p>
+                  <p className="text-sm text-muted-foreground">Круглосуточно, без выходных</p>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">

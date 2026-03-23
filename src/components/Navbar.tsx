@@ -9,6 +9,7 @@ const PHONE_DISPLAY = "+7 706 665 66 62";
 const links = [
   { to: "/", label: "Главная" },
   { to: "/services", label: "Услуги и цены" },
+  { to: "/about", label: "О компании" },
   { to: "/contacts", label: "Контакты" },
 ];
 

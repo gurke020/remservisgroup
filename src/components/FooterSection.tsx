@@ -17,6 +17,7 @@ const FooterSection = () => (
         <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/60">
           <Link to="/" className="hover:text-white transition-colors">Главная</Link>
           <Link to="/services" className="hover:text-white transition-colors">Услуги и цены</Link>
+          <Link to="/about" className="hover:text-white transition-colors">О компании</Link>
           <Link to="/contacts" className="hover:text-white transition-colors">Контакты</Link>
         </nav>
       </div>
