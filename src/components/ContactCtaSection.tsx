@@ -1,4 +1,5 @@
-import { Phone, MessageCircle, ShieldCheck } from "lucide-react";
+import { Phone, ShieldCheck } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "./useScrollReveal";
 
