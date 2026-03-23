@@ -20,9 +20,12 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border/50 shadow-sm">
       <div className="container flex items-center justify-between h-14 md:h-16 px-4 md:px-8">
-        <Link to="/" className="flex items-center gap-2 text-lg font-bold text-foreground tracking-tight">
-          <Snowflake className="size-5 text-accent" strokeWidth={1.75} />
-          Remservisgroup
+        <Link to="/" className="flex items-center gap-2 text-lg text-foreground tracking-widest uppercase">
+          <Snowflake className="size-5 text-accent" strokeWidth={1.5} />
+          <span>
+            <span className="font-semibold">Remservis</span>
+            <span className="font-light text-muted-foreground">group</span>
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
