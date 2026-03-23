@@ -30,7 +30,7 @@ const FooterSection = () => (
             {PHONE_DISPLAY}
           </a>
           <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors inline-flex items-center gap-1.5">
-            <MessageCircle className="w-3.5 h-3.5" />
+            <WhatsAppIcon className="w-3.5 h-3.5" />
             WhatsApp
           </a>
         </div>
