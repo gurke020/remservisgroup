@@ -1,4 +1,5 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
 import { Link } from "react-router-dom";
 
 const PHONE = "+77066656662";
