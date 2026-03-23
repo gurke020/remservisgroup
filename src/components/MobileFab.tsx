@@ -1,20 +1,28 @@
 import { Phone, MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const PHONE = "+77066656662";
 const WA_LINK = "https://wa.me/77066656662?text=Здравствуйте!%20У%20меня%20проблема%20с%20кондиционером.";
 
 const MobileFab = () => {
-  const [visible, setVisible] = useState(false);
+  const { pathname } = useLocation();
+  const [scrollPast, setScrollPast] = useState(false);
+
+  const isHome = pathname === "/";
+  const isContacts = pathname === "/contacts";
 
   useEffect(() => {
-    const onScroll = () => {
-      setVisible(window.scrollY > window.innerHeight * 0.85);
-    };
+    if (!isHome) return;
+    const onScroll = () => setScrollPast(window.scrollY > window.innerHeight * 0.85);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isHome]);
+
+  if (isContacts) return null;
+
+  const visible = isHome ? scrollPast : true;
 
   return (
     <div
