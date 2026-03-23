@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollReveal } from "@/components/useScrollReveal";
+import { submitFormspree } from "@/lib/formspree";
 
 const PHONE = "+77066656662";
 const PHONE_DISPLAY = "+7 706 665 66 62";
@@ -19,20 +20,25 @@ const ContactsPage = () => {
   const ref = useScrollReveal();
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     const name = (fd.get("name") as string || "").trim();
     const phone = (fd.get("phone") as string || "").trim();
     if (!name || name.length > NAME_MAX) return;
     if (!phone || phone.length > PHONE_MAX) return;
 
     setLoading(true);
-    setTimeout(() => {
+    try {
+      await submitFormspree(fd);
+      toast({ title: "Заявка принята!", description: "Мастер свяжется с вами в ближайшее время." });
+      form.reset();
+    } catch {
+      toast({ title: "Ошибка при отправке", description: "Попробуйте позже.", variant: "destructive" });
+    } finally {
       setLoading(false);
-      toast({ title: "Заявка отправлена!", description: "Перезвоним в течение 15 минут." });
-      (e.target as HTMLFormElement).reset();
-    }, 700);
+    }
   };
 
   return (
@@ -61,7 +67,7 @@ const ContactsPage = () => {
                 className="h-12 bg-secondary/50 border-border/60"
               />
               <Textarea
-                name="comment" placeholder="Опишите проблему (необязательно)"
+                name="message" placeholder="Опишите проблему (необязательно)"
                 maxLength={COMMENT_MAX} rows={3}
                 className="bg-secondary/50 border-border/60 resize-none"
               />
