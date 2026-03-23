@@ -16,18 +16,19 @@ const ContactSection = () => {
   const ref = useScrollReveal();
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setLoading(true);
-    // Simulate form submit
-    setTimeout(() => {
+    try {
+      await submitFormspree(new FormData(form));
+      toast({ title: "Заявка принята!", description: "Мастер свяжется с вами в ближайшее время." });
+      form.reset();
+    } catch {
+      toast({ title: "Ошибка при отправке", description: "Попробуйте позже.", variant: "destructive" });
+    } finally {
       setLoading(false);
-      toast({
-        title: "Заявка отправлена!",
-        description: "Мы свяжемся с вами в ближайшее время.",
-      });
-      (e.target as HTMLFormElement).reset();
-    }, 800);
+    }
   };
 
   return (

@@ -67,7 +67,7 @@ const ContactCtaSection = () => {
               className="h-12 bg-secondary/50 border-border/60 placeholder:text-muted-foreground/60" />
             <Input required name="phone" type="tel" placeholder="Номер телефона" maxLength={PHONE_MAX} autoComplete="tel"
               className="h-12 bg-secondary/50 border-border/60 placeholder:text-muted-foreground/60" />
-            <Textarea name="comment" placeholder="Что случилось с кондиционером? (необязательно)" maxLength={COMMENT_MAX} rows={3}
+            <Textarea name="message" placeholder="Что случилось с кондиционером? (необязательно)" maxLength={COMMENT_MAX} rows={3}
               className="bg-secondary/50 border-border/60 resize-none placeholder:text-muted-foreground/60" />
 
             <Button type="submit" variant="cta" size="xl" className="w-full" disabled={loading}>
