@@ -1,5 +1,4 @@
-import { Phone } from "lucide-react";
-import whatsappIcon from "@/assets/whatsapp-icon.png";
+import { Phone, MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -28,7 +27,7 @@ const MobileFab = () => {
 
   return (
     <div
-      className={`fixed bottom-5 right-5 z-50 flex flex-col items-center gap-[15px] md:hidden transition-all duration-300 ${
+      className={`fixed bottom-5 right-4 z-50 flex flex-col gap-3 md:hidden transition-all duration-300 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >
@@ -36,20 +35,14 @@ const MobileFab = () => {
         href={WA_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-14 h-14 transition-all active:scale-95 drop-shadow-[0_4px_12px_rgba(0,0,0,0.25)]"
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-[hsl(142,70%,40%)] text-white shadow-lg hover:shadow-xl transition-all active:scale-95"
         aria-label="WhatsApp"
       >
-        <img
-          src={whatsappIcon}
-          alt="WhatsApp"
-          width={56}
-          height={56}
-          className="w-14 h-14 object-contain"
-        />
+        <MessageCircle className="w-6 h-6" />
       </a>
       <a
         href={`tel:${PHONE}`}
-        className="flex items-center justify-center w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-[0_4px_12px_rgba(0,0,0,0.25)] transition-all active:scale-95"
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl transition-all active:scale-95"
         aria-label="Позвонить"
       >
         <Phone className="w-6 h-6" />

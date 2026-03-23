@@ -1,5 +1,4 @@
-import { Phone, ShieldCheck, Sparkles, Snowflake, MapPin } from "lucide-react";
-import WhatsAppIcon from "./WhatsAppIcon";
+import { Phone, MessageCircle, ShieldCheck, Sparkles, Snowflake, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PHONE = "+77066656662";
@@ -75,7 +74,7 @@ const HeroSection = () => {
             </Button>
             <Button asChild variant="whatsapp" size="xl">
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon className="!size-5" />
+                <MessageCircle className="!size-5" />
                 Написать в WhatsApp
               </a>
             </Button>
