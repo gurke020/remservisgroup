@@ -20,13 +20,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border/50 shadow-sm">
       <div className="container flex items-center justify-between h-14 md:h-16 px-4 md:px-8">
-        <Link to="/" className="flex items-center gap-1.5 text-lg font-bold text-foreground tracking-tight">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" className="text-orange-500 shrink-0">
-            <line x1="12" y1="2" x2="12" y2="22" />
-            <line x1="2" y1="12" x2="22" y2="12" />
-            <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
-            <line x1="19.07" y1="4.93" x2="4.93" y2="19.07" />
-          </svg>
+        <Link to="/" className="text-lg font-bold text-foreground tracking-tight">
           Remservisgroup
         </Link>
 
