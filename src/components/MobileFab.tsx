@@ -36,10 +36,10 @@ const MobileFab = () => {
         href={WA_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-14 h-14 rounded-full bg-[hsl(142,70%,40%)] text-white shadow-lg hover:shadow-xl transition-all active:scale-95"
+        className="block w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all active:scale-95 hover:scale-110 overflow-hidden"
         aria-label="WhatsApp"
       >
-        <MessageCircle className="w-6 h-6" />
+        <img src={whatsappIcon} alt="WhatsApp" className="w-full h-full object-cover rounded-full" />
       </a>
       <a
         href={`tel:${PHONE}`}
