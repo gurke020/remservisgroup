@@ -85,9 +85,12 @@ const ServicesPage = () => {
                   <tbody>
                     {cat.rows.map((r, i) => (
                       <tr key={r.name} className={i > 0 ? "border-t border-border/20" : ""}>
-                        <td className="py-2.5 text-muted-foreground pr-3 leading-snug">{r.name}</td>
+                        <td className="py-2.5 text-foreground pr-3 leading-snug">{r.name}</td>
                         <td className="py-2.5 text-right font-semibold text-cta whitespace-nowrap tabular-nums">
                           {r.price}
+                        </td>
+                        <td className="py-2.5 pl-3 text-right text-muted-foreground whitespace-nowrap hidden sm:table-cell">
+                          {r.note}
                         </td>
                       </tr>
                     ))}
