@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollReveal } from "@/components/useScrollReveal";
+import { submitFormspree } from "@/lib/formspree";
 
 const PHONE = "+77066656662";
 const PHONE_DISPLAY = "+7 706 665 66 62";
