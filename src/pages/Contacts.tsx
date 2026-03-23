@@ -41,6 +41,17 @@ const ContactsPage = () => {
             </Button>
           </div>
 
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Email</p>
+            <a
+              href="mailto:Remervisgroup@mail.ru"
+              className="text-lg font-semibold hover:text-primary transition-colors inline-flex items-center gap-2"
+            >
+              <Mail className="w-5 h-5 text-primary" />
+              Remervisgroup@mail.ru
+            </a>
+          </div>
+
           <div className="space-y-3 pt-2 border-t border-border/50">
             <div className="flex items-start gap-2.5">
               <Clock className="w-4 h-4 text-primary mt-0.5 shrink-0" />
