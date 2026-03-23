@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import Index from "./pages/Index.tsx";
 import Services from "./pages/Services.tsx";
-
+import About from "./pages/About.tsx";
 import Contacts from "./pages/Contacts.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
