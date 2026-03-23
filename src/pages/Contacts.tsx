@@ -1,4 +1,5 @@
-import { Phone, MessageCircle, MapPin, Clock, Mail } from "lucide-react";
+import { Phone, MapPin, Clock, Mail } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/components/useScrollReveal";
 
