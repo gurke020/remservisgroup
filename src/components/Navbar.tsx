@@ -20,9 +20,9 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border/50 shadow-sm">
-      <div className="container flex items-center justify-between h-16 md:h-20 px-4 md:px-8">
+      <div className="container flex items-center justify-between h-20 md:h-24 px-4 md:px-8">
         <Link to="/" className="shrink-0 flex items-center">
-          <img src={logo} alt="Remservisgroup" className="h-14 md:h-16 w-auto object-contain" width={280} height={64} />
+          <img src={logo} alt="Remservisgroup" className="h-16 md:h-20 w-auto object-contain" width={340} height={80} />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
