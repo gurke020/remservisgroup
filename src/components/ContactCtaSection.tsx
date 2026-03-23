@@ -87,7 +87,7 @@ const ContactCtaSection = () => {
             <div className="h-px flex-1 bg-border/60" />
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Button asChild variant="outline" size="lg" className="flex-1">
               <a href={`tel:${PHONE}`}>
                 <Phone className="!size-4" />
