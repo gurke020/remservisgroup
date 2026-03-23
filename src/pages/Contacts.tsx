@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Clock, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/components/useScrollReveal";
 
@@ -39,6 +39,17 @@ const ContactsPage = () => {
                 Написать в WhatsApp
               </a>
             </Button>
+          </div>
+
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Email</p>
+            <a
+              href="mailto:Remervisgroup@mail.ru"
+              className="text-lg font-semibold hover:text-primary transition-colors inline-flex items-center gap-2"
+            >
+              <Mail className="w-5 h-5 text-primary" />
+              Remervisgroup@mail.ru
+            </a>
           </div>
 
           <div className="space-y-3 pt-2 border-t border-border/50">
