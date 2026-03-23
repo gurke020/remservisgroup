@@ -11,6 +11,7 @@ const MobileFab = () => {
 
   const isHome = pathname === "/";
   const isContacts = pathname === "/contacts";
+  const isServices = pathname === "/services";
 
   useEffect(() => {
     if (!isHome) return;
