@@ -1,7 +1,8 @@
 import {
   Wind, Wrench, Settings, Thermometer, Droplets,
-  ArrowRight, Phone, MessageCircle
+  ArrowRight, Phone
 } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/components/useScrollReveal";
