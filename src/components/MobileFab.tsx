@@ -1,6 +1,7 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 const PHONE = "+77066656662";
 const WA_LINK = "https://wa.me/77066656662?text=Здравствуйте!%20У%20меня%20проблема%20с%20кондиционером.";
