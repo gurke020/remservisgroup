@@ -67,7 +67,7 @@ const ContactsPage = () => {
                 className="h-12 bg-secondary/50 border-border/60"
               />
               <Textarea
-                name="comment" placeholder="Опишите проблему (необязательно)"
+                name="message" placeholder="Опишите проблему (необязательно)"
                 maxLength={COMMENT_MAX} rows={3}
                 className="bg-secondary/50 border-border/60 resize-none"
               />
