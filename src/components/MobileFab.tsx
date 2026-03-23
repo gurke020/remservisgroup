@@ -21,7 +21,7 @@ const MobileFab = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHome]);
 
-  if (isContacts) return null;
+  if (isContacts || isServices) return null;
 
   const visible = isHome ? scrollPast : true;
 
