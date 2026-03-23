@@ -1,9 +1,9 @@
 import { Phone, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const PHONE = "+77086309407";
-const PHONE_DISPLAY = "+7 708 630 94 07";
-const WA_LINK = "https://wa.me/77086309407";
+const PHONE = "+77066656662";
+const PHONE_DISPLAY = "+7 706 665 66 62";
+const WA_LINK = "https://wa.me/77066656662";
 
 const FooterSection = () => (
   <footer className="bg-foreground py-10 px-4">
@@ -17,6 +17,7 @@ const FooterSection = () => (
         <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/60">
           <Link to="/" className="hover:text-white transition-colors">Главная</Link>
           <Link to="/services" className="hover:text-white transition-colors">Услуги и цены</Link>
+          <Link to="/about" className="hover:text-white transition-colors">О компании</Link>
           <Link to="/contacts" className="hover:text-white transition-colors">Контакты</Link>
         </nav>
       </div>

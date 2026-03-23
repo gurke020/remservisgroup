@@ -3,12 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const PHONE = "+77086309407";
-const PHONE_DISPLAY = "+7 708 630 94 07";
+const PHONE = "+77066656662";
+const PHONE_DISPLAY = "+7 706 665 66 62";
 
 const links = [
   { to: "/", label: "Главная" },
   { to: "/services", label: "Услуги и цены" },
+  { to: "/about", label: "О компании" },
   { to: "/contacts", label: "Контакты" },
 ];
 

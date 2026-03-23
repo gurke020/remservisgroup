@@ -6,9 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollReveal } from "@/components/useScrollReveal";
 
-const PHONE = "+77086309407";
-const PHONE_DISPLAY = "+7 708 630 94 07";
-const WA_LINK = `https://wa.me/77086309407?text=${encodeURIComponent("Здравствуйте! Хочу вызвать мастера по кондиционерам.")}`;
+const PHONE = "+77066656662";
+const PHONE_DISPLAY = "+7 706 665 66 62";
+const WA_LINK = `https://wa.me/77066656662?text=${encodeURIComponent("Здравствуйте! Хочу вызвать мастера по кондиционерам.")}`;
 
 const NAME_MAX = 80;
 const PHONE_MAX = 30;
@@ -104,7 +104,7 @@ const ContactsPage = () => {
                 <Clock className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-sm font-medium">Режим работы</p>
-                  <p className="text-sm text-muted-foreground">Ежедневно с 09:00 до 20:00</p>
+                  <p className="text-sm text-muted-foreground">Круглосуточно, без выходных</p>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
