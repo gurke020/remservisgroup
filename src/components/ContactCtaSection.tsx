@@ -1,46 +1,14 @@
-import { useState, type FormEvent } from "react";
-import { Phone, MessageCircle, Send, ShieldCheck } from "lucide-react";
+import { Phone, MessageCircle, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 import { useScrollReveal } from "./useScrollReveal";
-import { submitFormspree } from "@/lib/formspree";
 
 const PHONE = "+77066656662";
 const PHONE_DISPLAY = "+7 706 665 66 62";
 const WA_LINK = "https://wa.me/77066656662?text=Здравствуйте!%20У%20меня%20проблема%20с%20кондиционером.";
 
-const NAME_MAX = 80;
-const PHONE_MAX = 30;
-const COMMENT_MAX = 500;
-
 const ContactCtaSection = () => {
-  const { toast } = useToast();
   const headRef = useScrollReveal("up");
-  const formRef = useScrollReveal("scale");
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const fd = new FormData(form);
-    const name = (fd.get("name") as string || "").trim();
-    const phone = (fd.get("phone") as string || "").trim();
-    if (!name || name.length > NAME_MAX) return;
-    if (!phone || phone.length > PHONE_MAX) return;
-
-    setLoading(true);
-    try {
-      await submitFormspree(fd);
-      toast({ title: "Заявка принята!", description: "Мастер свяжется с вами в ближайшее время." });
-      form.reset();
-    } catch {
-      toast({ title: "Ошибка при отправке", description: "Попробуйте позже.", variant: "destructive" });
-    } finally {
-      setLoading(false);
-    }
-  };
+  const btnRef = useScrollReveal("scale");
 
   return (
     <section id="contact" className="relative overflow-hidden">
@@ -54,53 +22,33 @@ const ContactCtaSection = () => {
       <div className="container relative z-10 py-16 md:py-24 px-4 md:px-8">
         <div ref={headRef} style={{ opacity: 0 }} className="text-center mb-10 max-w-lg mx-auto space-y-3">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-balance leading-tight">
-            Не&nbsp;терпите жару — оставьте&nbsp;заявку&nbsp;сейчас
+            Не&nbsp;терпите жару — позвоните&nbsp;сейчас
           </h2>
           <p className="text-white/70 text-base md:text-lg leading-relaxed">
-            Заполните форму — перезвоним в&nbsp;течение 15&nbsp;минут и&nbsp;согласуем визит мастера.
+            Свяжитесь с&nbsp;нами любым удобным способом — перезвоним в&nbsp;течение 15&nbsp;минут и&nbsp;согласуем визит мастера.
           </p>
         </div>
 
-        <div ref={formRef} style={{ opacity: 0 }} className="max-w-md mx-auto bg-card rounded-2xl p-6 md:p-8 shadow-[0_4px_24px_hsl(211_65%_20%/0.2)] border border-white/10">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Input required name="name" placeholder="Ваше имя" maxLength={NAME_MAX} autoComplete="name"
-              className="h-12 bg-secondary/50 border-border/60 placeholder:text-muted-foreground/60" />
-            <Input required name="phone" type="tel" placeholder="Номер телефона" maxLength={PHONE_MAX} autoComplete="tel"
-              className="h-12 bg-secondary/50 border-border/60 placeholder:text-muted-foreground/60" />
-            <Textarea name="message" placeholder="Что случилось с кондиционером? (необязательно)" maxLength={COMMENT_MAX} rows={3}
-              className="bg-secondary/50 border-border/60 resize-none placeholder:text-muted-foreground/60" />
-
-            <Button type="submit" variant="cta" size="xl" className="w-full" disabled={loading}>
-              <Send className="!size-4" />
-              {loading ? "Отправляем..." : "Вызвать мастера"}
-            </Button>
-
-            <p className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground text-center">
-              <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
-              Бесплатная консультация · Без&nbsp;обязательств
-            </p>
-          </form>
-
-          <div className="flex items-center gap-3 my-5">
-            <div className="h-px flex-1 bg-border/60" />
-            <span className="text-xs text-muted-foreground uppercase tracking-widest">или</span>
-            <div className="h-px flex-1 bg-border/60" />
-          </div>
-
+        <div ref={btnRef} style={{ opacity: 0 }} className="max-w-md mx-auto space-y-5">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Button asChild variant="outline" size="lg" className="flex-1">
+            <Button asChild variant="hero" size="xl" className="flex-1">
               <a href={`tel:${PHONE}`}>
-                <Phone className="!size-4" />
+                <Phone className="!size-5" />
                 {PHONE_DISPLAY}
               </a>
             </Button>
-            <Button asChild variant="whatsapp" size="lg" className="flex-1">
+            <Button asChild variant="whatsapp" size="xl" className="flex-1">
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="!size-4" />
+                <MessageCircle className="!size-5" />
                 WhatsApp
               </a>
             </Button>
           </div>
+
+          <p className="flex items-center justify-center gap-1.5 text-xs text-white/50 text-center">
+            <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
+            Бесплатная консультация · Без&nbsp;обязательств
+          </p>
         </div>
       </div>
     </section>
