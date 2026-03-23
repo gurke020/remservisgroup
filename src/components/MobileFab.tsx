@@ -28,7 +28,7 @@ const MobileFab = () => {
 
   return (
     <div
-      className={`fixed bottom-5 right-4 z-50 flex flex-col gap-3 md:hidden transition-all duration-300 ${
+      className={`fixed bottom-5 right-5 z-50 flex flex-col gap-5 md:hidden transition-all duration-300 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >
@@ -36,14 +36,14 @@ const MobileFab = () => {
         href={WA_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-14 h-14 transition-all active:scale-95 drop-shadow-lg hover:drop-shadow-xl"
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-[hsl(142,70%,45%)] shadow-[0_4px_14px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] transition-all active:scale-95"
         aria-label="WhatsApp"
       >
-        <WhatsAppIcon className="w-14 h-14" />
+        <WhatsAppIcon className="w-8 h-8" />
       </a>
       <a
         href={`tel:${PHONE}`}
-        className="flex items-center justify-center w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl transition-all active:scale-95"
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-[0_4px_14px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] transition-all active:scale-95"
         aria-label="Позвонить"
       >
         <Phone className="w-6 h-6" />
