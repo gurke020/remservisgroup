@@ -36,7 +36,7 @@ const ContactsPage = () => {
             <p className="text-sm text-muted-foreground mb-2">WhatsApp</p>
             <Button asChild variant="whatsapp" size="lg">
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="!size-5" />
+                <WhatsAppIcon className="!size-5" />
                 Написать в WhatsApp
               </a>
             </Button>
