@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const PHONE = "+77066656662";
 const PHONE_DISPLAY = "+7 706 665 66 62";
-const WA_LINK = `https://wa.me/77066656662?text=${encodeURIComponent("Здравствуйте! Хочу вызвать мастера по кондиционерам.")}`;
+const WA_LINK = "https://wa.me/77066656662?text=Здравствуйте!%20У%20меня%20проблема%20с%20кондиционером.";
 
 const snowflakes = [
   { top: "12%", left: "8%", size: 14, delay: "0s", duration: "6s" },
