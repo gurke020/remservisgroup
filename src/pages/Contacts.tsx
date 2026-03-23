@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Clock, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/components/useScrollReveal";
 
