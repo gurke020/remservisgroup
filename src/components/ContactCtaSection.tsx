@@ -1,4 +1,5 @@
-import { Phone, MessageCircle, ShieldCheck } from "lucide-react";
+import { Phone, ShieldCheck } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "./useScrollReveal";
 
@@ -39,7 +40,7 @@ const ContactCtaSection = () => {
             </Button>
             <Button asChild variant="whatsapp" size="xl" className="flex-1">
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="!size-5" />
+                <WhatsAppIcon className="!size-5" />
                 WhatsApp
               </a>
             </Button>
