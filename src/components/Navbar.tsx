@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, Snowflake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PHONE = "+77066656662";
