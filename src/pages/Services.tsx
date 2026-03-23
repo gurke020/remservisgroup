@@ -1,10 +1,13 @@
 import {
   Wind, Wrench, Settings, Thermometer, Droplets,
-  Fan, ArrowRight
+  ArrowRight, Phone, MessageCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/components/useScrollReveal";
+
+const PHONE = "+77066656662";
+const WA_LINK = "https://wa.me/77066656662?text=Здравствуйте!%20У%20меня%20проблема%20с%20кондиционером.";
 
 const categories = [
   {
@@ -18,16 +21,16 @@ const categories = [
     title: "Чистка кондиционера",
     icon: Wind,
     rows: [
-      { name: "Чистка кондиционера (внутренний блок)", price: "от 8 000 ₸", note: "С антибактериальной обработкой" },
-      { name: "Чистка кондиционера (полная)", price: "от 12 000 ₸", note: "Внутренний + наружный блок" },
+      { name: "Чистка внутреннего блока", price: "от 8 000 ₸", note: "С антибактериальной обработкой" },
+      { name: "Полная чистка", price: "от 12 000 ₸", note: "Внутренний + наружный блок" },
     ],
   },
   {
     title: "Заправка фреоном",
     icon: Droplets,
     rows: [
-      { name: "Заправка фреоном R410A", price: "от 7 000 ₸", note: "За 100 грамм" },
-      { name: "Заправка фреоном R32", price: "от 8 000 ₸", note: "За 100 грамм" },
+      { name: "Фреон R410A", price: "от 7 000 ₸", note: "За 100 грамм" },
+      { name: "Фреон R32", price: "от 8 000 ₸", note: "За 100 грамм" },
     ],
   },
   {
@@ -36,8 +39,8 @@ const categories = [
     rows: [
       { name: "Ремонт платы управления", price: "от 12 000 ₸", note: "С заменой компонентов" },
       { name: "Замена компрессора", price: "от 35 000 ₸", note: "С заправкой фреона" },
-      { name: "Замена вентилятора (внутренний блок)", price: "от 15 000 ₸", note: "С гарантией" },
-      { name: "Замена вентилятора (наружный блок)", price: "от 18 000 ₸", note: "С гарантией" },
+      { name: "Замена вентилятора (внутр.)", price: "от 15 000 ₸", note: "С гарантией" },
+      { name: "Замена вентилятора (наруж.)", price: "от 18 000 ₸", note: "С гарантией" },
       { name: "Замена теплообменника", price: "от 25 000 ₸", note: "Внутренний блок" },
     ],
   },
@@ -51,65 +54,80 @@ const categories = [
     ],
   },
 ];
+
 const ServicesPage = () => {
   const ref = useScrollReveal();
 
   return (
-    <div className="section-padding" ref={ref} style={{ opacity: 0 }}>
-      <div className="container">
+    <div className="py-16 md:py-24 bg-secondary/30" ref={ref} style={{ opacity: 0 }}>
+      <div className="container px-4 md:px-8">
         <p className="text-primary font-semibold text-sm tracking-[0.2em] uppercase text-center mb-3">
           Услуги и цены
         </p>
-        <h1 className="text-3xl md:text-4xl font-bold text-center text-balance mb-4">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-center text-balance mb-4">
           Все услуги с&nbsp;прозрачными ценами
         </h1>
-        <p className="text-muted-foreground text-center max-w-md mx-auto mb-12">
-          Точная стоимость зависит от модели и сложности. Диагностика бесплатна при&nbsp;заказе ремонта.
+        <p className="text-muted-foreground text-center max-w-lg mx-auto mb-14 text-base md:text-lg leading-relaxed">
+          Точная стоимость зависит от модели и&nbsp;сложности. Диагностика бесплатна при&nbsp;заказе ремонта.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {categories.map((cat) => (
             <div
               key={cat.title}
-              className="bg-card rounded-xl border border-border/40 shadow-[0_1px_3px_hsl(211_65%_45%/0.06)] overflow-hidden"
+              className="group bg-card rounded-2xl border border-border/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
             >
-              <div className="flex items-center gap-3 p-5 pb-3">
-                <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center shrink-0">
-                  <cat.icon className="w-5 h-5 text-primary" strokeWidth={1.8} />
+              {/* Header */}
+              <div className="flex items-center gap-4 p-6 pb-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/15 transition-colors">
+                  <cat.icon className="w-6 h-6 text-primary" strokeWidth={1.6} />
                 </div>
-                <h2 className="text-lg font-semibold">{cat.title}</h2>
+                <h2 className="text-xl font-bold">{cat.title}</h2>
               </div>
 
-              <div className="px-5 pb-5">
-                <table className="w-full text-sm">
-                  <tbody>
-                    {cat.rows.map((r, i) => (
-                      <tr key={r.name} className={i > 0 ? "border-t border-border/20" : ""}>
-                        <td className="py-2.5 text-foreground pr-3 leading-snug">{r.name}</td>
-                        <td className="py-2.5 text-right font-semibold text-cta whitespace-nowrap tabular-nums">
+              {/* Rows */}
+              <div className="px-6 pb-6 flex-1">
+                <div className="space-y-0 divide-y divide-border/30">
+                  {cat.rows.map((r) => (
+                    <div key={r.name} className="py-3.5 flex flex-col gap-1">
+                      <div className="flex items-start justify-between gap-4">
+                        <span className="text-sm md:text-[0.938rem] font-medium text-foreground leading-snug">
+                          {r.name}
+                        </span>
+                        <span className="text-base md:text-lg font-bold text-cta whitespace-nowrap tabular-nums shrink-0">
                           {r.price}
-                        </td>
-                        <td className="py-2.5 pl-3 text-right text-muted-foreground whitespace-nowrap hidden sm:table-cell">
-                          {r.note}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                        </span>
+                      </div>
+                      <span className="text-xs text-muted-foreground leading-snug">
+                        {r.note}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">Нужен точный расчёт? Оставьте заявку.</p>
-          <Button asChild size="lg">
-            <Link to="/contacts">
-              Оставить заявку
-              <ArrowRight className="!size-4" />
-            </Link>
-          </Button>
+        <div className="text-center mt-16 space-y-4">
+          <p className="text-muted-foreground text-base">
+            Нужна точная стоимость? Свяжитесь с&nbsp;нами.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button asChild variant="cta" size="xl">
+              <a href={`tel:${PHONE}`}>
+                <Phone className="!size-5" />
+                Позвонить
+              </a>
+            </Button>
+            <Button asChild variant="whatsapp" size="xl">
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="!size-5" />
+                Написать в WhatsApp
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </div>
