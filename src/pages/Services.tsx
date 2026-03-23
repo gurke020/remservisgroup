@@ -1,7 +1,8 @@
 import {
   Wind, Wrench, Settings, Thermometer, Droplets,
-  ArrowRight, Phone, MessageCircle
+  ArrowRight, Phone
 } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/components/useScrollReveal";
@@ -123,7 +124,7 @@ const ServicesPage = () => {
             </Button>
             <Button asChild variant="whatsapp" size="xl">
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="!size-5" />
+                <WhatsAppIcon className="!size-5" />
                 Написать в WhatsApp
               </a>
             </Button>

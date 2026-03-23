@@ -1,4 +1,5 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -38,7 +39,7 @@ const MobileFab = () => {
         className="flex items-center justify-center w-14 h-14 rounded-full bg-[hsl(142,70%,40%)] text-white shadow-lg hover:shadow-xl transition-all active:scale-95"
         aria-label="WhatsApp"
       >
-        <MessageCircle className="w-6 h-6" />
+        <WhatsAppIcon className="w-6 h-6" />
       </a>
       <a
         href={`tel:${PHONE}`}
