@@ -1,7 +1,6 @@
-import { Phone } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 const PHONE = "+77066656662";
 const WA_LINK = "https://wa.me/77066656662?text=Здравствуйте!%20У%20меня%20проблема%20с%20кондиционером.";
@@ -36,10 +35,10 @@ const MobileFab = () => {
         href={WA_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-14 h-14 bg-transparent transition-all active:scale-95 hover:scale-110"
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-[hsl(142,70%,40%)] text-white shadow-lg hover:shadow-xl transition-all active:scale-95"
         aria-label="WhatsApp"
       >
-        <img src={whatsappIcon} alt="WhatsApp" className="w-[4.25rem] h-[4.25rem] rounded-full shadow-lg" style={{ clipPath: 'circle(50%)' }} />
+        <MessageCircle className="w-6 h-6" />
       </a>
       <a
         href={`tel:${PHONE}`}
