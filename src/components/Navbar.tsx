@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, Snowflake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PHONE = "+77066656662";
@@ -20,7 +20,8 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border/50 shadow-sm">
       <div className="container flex items-center justify-between h-14 md:h-16 px-4 md:px-8">
-        <Link to="/" className="text-lg font-bold text-foreground tracking-tight">
+        <Link to="/" className="flex items-center gap-2 text-lg font-bold text-foreground tracking-tight">
+          <Snowflake className="size-5 text-accent" strokeWidth={1.75} />
           Remservisgroup
         </Link>
 
