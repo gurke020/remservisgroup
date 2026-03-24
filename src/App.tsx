@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import MobileFab from "@/components/MobileFab";
+import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index.tsx";
 import Services from "./pages/Services.tsx";
 import About from "./pages/About.tsx";
