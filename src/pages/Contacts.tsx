@@ -45,11 +45,11 @@ const ContactsPage = () => {
           <div>
             <p className="text-sm text-muted-foreground mb-1">Email</p>
             <a
-              href="mailto:Remervisgroup@mail.ru"
+              href="mailto:remservisgroup@mail.ru"
               className="text-lg font-semibold hover:text-primary transition-colors inline-flex items-center gap-2"
             >
               <Mail className="w-5 h-5 text-primary" />
-              Remervisgroup@mail.ru
+              remservisgroup@mail.ru
             </a>
           </div>
 
